@@ -1,0 +1,154 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  overflow: hidden;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, .8);
+  backdrop-filter: blur(3px);
+  padding: 3rem;
+  position: relative;
+}
+
+.container .area1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.area1 h1 {
+  color: white;
+  top: 200px;
+  font-size: 50px;
+  position: absolute;
+}
+
+.area1 .bButton {
+  padding: 10px 30px;
+  background-color: #ffff;
+  font-size: 23px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: 900;
+  z-index: 1;
+  margin-right: 10px;
+}
+
+.bButton:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.container .card {
+  width: 100%;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 50px auto;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  box-shadow: 2px 1px 63px -10px rgba(255, 255, 255, 0.75);
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1);
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.container .card.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card .nominal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  border-top: 0.1px solid black;
+}
+
+.card .result {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  width: 100%;
+  padding: 5px;
+  height: 90px;
+  font-size: 45px;
+}
+
+.area .close {
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  left: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+  border: none;
+}
+
+.area .close:hover {
+  cursor: pointer;
+  background-color: rgb(232, 226, 226);
+}
+
+.result span {
+  text-align: end;
+  margin-right: 20px;
+}
+
+.nominal .item {
+  border: none;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+
+.nominal .zero {
+  grid-column: span 2;
+  border-radius: 45px;
+  aspect-ratio: auto;
+}
+
+.nominal .black {
+  background-color: #343434;
+  color: white;
+}
+
+.nominal .orange {
+  background-color: #ff9f0a;
+}
+
+.nominal .abu-abu {
+  background-color: #a5a5a5;
+}
+
+/* hover bro! */
+.nominal .orange:hover {
+  background-color: #e08c10;
+}
+
+.nominal .black:hover {
+  background-color: #a5a5a5;
+}
+
+.nominal .abu-abu:hover {
+  background-color: #8a8787;
+}
